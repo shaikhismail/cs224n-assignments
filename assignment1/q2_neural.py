@@ -59,7 +59,6 @@ def forward_backward_prop(data, labels, params, dimensions):
     gradW2 = dW2
     gradb1 = db1
     gradW1 = dW1
-    #raise NotImplementedError
     ### END YOUR CODE
 
     ### Stack gradients (do not modify)

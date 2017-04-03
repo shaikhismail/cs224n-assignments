@@ -75,7 +75,6 @@ def test_sigmoid():
     """
     print "Running your tests..."
     ### YOUR CODE HERE
-    #raise NotImplementedError
     x = 0   
     f = sigmoid(x)
     g = sigmoid_grad(f)

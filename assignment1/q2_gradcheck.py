@@ -13,7 +13,6 @@ def gradcheck_naive(f, x):
          cost and its gradients
     x -- the point (numpy array) to check the gradient at
     """
-
     rndstate = random.getstate()
     random.setstate(rndstate)
     fx, grad = f(x) # Evaluate function value at original point
