@@ -60,7 +60,6 @@ def softmaxCostAndGradient(predicted, target, outputVectors, dataset):
     """
 
     ### YOUR CODE HERE
-    #raise NotImplementedError			#size(predicted) = m
     Udotv = np.dot(outputVectors, predicted)	#Wxm . mx1 = Wx1
     y_hat = softmax(Udotv)			#Wx1
     cost = -np.log(y_hat[target])		#1x1
