@@ -85,7 +85,6 @@ def test_softmax():
     """
     print "Running your tests..."
     ### YOUR CODE HERE
-    #raise NotImplementedError
     test = softmax(np.ones([2,2]))
     print test
     ### END YOUR CODE
