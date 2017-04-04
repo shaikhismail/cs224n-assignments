@@ -49,7 +49,9 @@ def getSentenceFeatures(tokens, wordVectors, sentence):
     sentVector = np.zeros((wordVectors.shape[1],))
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    for word in sentence:
+    	sentVector += wordVectors[tokens[word]]
+    #raise NotImplementedError
     ### END YOUR CODE
 
     assert sentVector.shape == (wordVectors.shape[1],)
@@ -84,10 +86,18 @@ def chooseBestModel(results):
     Returns:
     Your chosen result dictionary.
     """
-    bestResult = None
+    bestResult = {}
+    bestResult["dev"] = -1
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    for result in results:
+    	if result["dev"] > bestResult["dev"]:
+		bestResult["reg"] = result["reg"]
+		bestResult["clf"] = result["clf"]
+		bestResult["train"] = result["train"]
+		bestResult["dev"] = result["dev"]
+		bestResult["test"] = result["test"]
+    #raise NotImplementedError
     ### END YOUR CODE
 
     return bestResult
