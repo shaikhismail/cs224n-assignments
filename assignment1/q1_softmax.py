@@ -85,7 +85,7 @@ def test_softmax():
     """
     print "Running your tests..."
     ### YOUR CODE HERE
-    test = softmax(np.ones([2,2]))
+    test = softmax(np.array([[1001, 1002], [3, 4]]))
     print test
     ### END YOUR CODE
 
